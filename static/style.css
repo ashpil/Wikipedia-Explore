@@ -1,0 +1,168 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	font-size: 0.875em;
+	color: #222222;
+}
+
+#map {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+#map-wrapper {
+	float: right;
+	position: relative;
+	width: calc(100vw - 400px);
+	height: 100vh; /* 100% */
+}
+
+#sidebar {
+	position: fixed;
+	width: 400px;
+	height:100vh;
+	float: left;
+	overflow: auto;
+	direction: rtl;
+	background-color: white;
+}
+
+#text {
+	padding-left: 5%;
+	padding-right: 5%;
+	direction: ltr;
+}
+
+button {
+	width: 95%;
+    margin: auto;
+    display: block;
+    font-size: 20px;
+    padding: 10px 25px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #cedff2;
+	border: 1px solid #a3b0bf;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #dee9f6;
+}
+
+button:active {
+  background-color: #afcbea;
+}
+
+#content {
+	line-height: 1.6;
+	margin: 0.5em 0;
+}
+h1 {
+	text-align: center;
+	font-family: 'Linux Libertine','Georgia','Times',serif;
+}
+
+#title {
+	font-weight: normal;
+    margin-top: 0.5em;
+	margin-bottom: 0.25em;
+	font-size: 1.8em;
+	padding: 0;
+	font-family: 'Linux Libertine','Georgia','Times',serif;
+	line-height: 1.3;
+	border-bottom: 1px solid #a2a9b1;
+}
+
+#credit {
+	font-size: 80%;
+	display: block;
+}
+
+#titlelink {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+.mapboxgl-popup {
+	max-width: 400px;
+	font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+input[type=checkbox] {
+	display: none;
+}
+
+@media only screen and (max-device-width: 414px) {
+    #sidebar {
+        width: 100%;
+        height: 100%;
+    }
+
+    label {
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 20%;
+        bottom: 0;
+        z-index: 2000;
+        text-align: center;
+    }
+    .down {
+        position: relative;
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 10px;
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        top: 50%;
+    }
+
+    #desc_open:checked~ #sidebar {
+        height: 100px;
+        overflow: hidden;
+    }
+
+    #desc_open:checked~ #sidebar h1 {
+        display: none;
+    }
+
+    #desc_open:checked~ #sidebar button {
+        margin-top: 0.5em;
+    }
+
+    #desc_open:checked~ label {
+        top: 60px;
+        height: 6%;
+    }
+
+    #desc_open:checked~ label .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        top: 0;
+    }
+
+    #desc_open:checked~ #sidebar #text {
+        display: none;
+    }
+
+    #map-wrapper {
+	    float: none;
+	    position: fixed;
+	    top: 100px;
+	    bottom: 0;
+	    width: 100%;
+    }
+
+    #description {
+        position: absolute;
+        height: 50%;
+        overflow: auto;
+        z-index: 2001;
+    }
+}

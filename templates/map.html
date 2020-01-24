@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Explore Wikipedia</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css" rel="stylesheet" />
+<link rel="stylesheet" href="/static/style.css" />
+<link rel="shortcut icon" href="/static/favicon.ico"/>
+</head>
+
+<body>
+	<div id="map-wrapper">
+	<div id="map"></div>
+	</div>
+	<script src='/static/script.js'></script>
+	<input id="desc_open" type="checkbox" /><label for="desc_open"><i class="arrow down"></i></label>
+	<div id="sidebar">
+	<h1>Explore Wikipedia</h1>
+	<button id="button">Get Articles in Area</button>
+	<div id="text">
+	<a target="_blank" id="titlelink"><h2 id="title">How to use</h2></a>
+	<p id="credit">From Wikipedia, the free encyclopedia</p>
+	<div id="description"><p id="content">Find an area you want to know more about, then click "Get Articles in Area" above to find out what's around.</p></div>
+	</div>
+	</div>
+</body>
+</html>
