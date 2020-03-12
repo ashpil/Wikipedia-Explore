@@ -117,11 +117,6 @@ def getDescription():
         # Makes those links open in new tab
         data = data.replace("<a ", '<a target="_blank" ')
 
-        # CMU easter egg. Damn this is awkward for the other schools I'm applying to.
-        if article == "48093":
-            data += '<p style="color:red;"><a title="I know you are curious: I did not do this for other schools">\n\n\ni actually really wanna go to cmu accept me pls</a></p>'
-        return data
-
 
 if __name__ == '__main__':
     APP.run(debug=True)
